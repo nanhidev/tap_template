@@ -40,8 +40,8 @@ public class DriverFactory  {
             capabilities.setBrowserName("chrome");
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless=new");
-            driver = WebDriverManager.chromedriver().capabilities(options).create();
-//            driver= WebDriverManager.chromedriver().create();
+            // driver = WebDriverManager.chromedriver().capabilities(options).create();
+           driver= WebDriverManager.chromedriver().create();
             logger.info("chrome driver initialized");
         } else if (browserName.equals("firefox")) {
             System.setProperty("webdriver.gecko.driver", "src/main/drivers/geckodriver.exe");
